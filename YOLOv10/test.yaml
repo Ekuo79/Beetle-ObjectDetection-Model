@@ -1,0 +1,6 @@
+path: /blue/hulcr/eric.kuo/test_dataset
+train: train/images
+val: train/images
+
+names:
+  0: bug
