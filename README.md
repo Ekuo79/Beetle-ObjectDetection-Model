@@ -68,4 +68,15 @@ To ensure robust evaluation, we are using **5-fold cross-validation** to compare
 - Inference Speed
 - Detection robustness on small clustered objects
 
-The best-performing model will be selected. Results soon to come!
+The best-performing model will be selected
+
+### mAP50-95
+| Fold | YOLOv10          | Co-DETR          |
+|------|------------------|------------------|
+| 1    | 0.97848          | 0.931            |
+| 2    | 0.95066          | 0.923            |
+| 3    | 0.97371          | 0.942            |
+| 4    | 0.96982          | 0.930            |
+| 5    | 0.97123          | 0.945            |
+
+More results soon to come!
