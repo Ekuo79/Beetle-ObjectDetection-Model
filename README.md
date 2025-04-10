@@ -48,20 +48,20 @@ To make the label refinement process more efficient, I developed a **bounding bo
 
 ![Bounding Box Editor Screenshot](clean_data/editor.png)
 
-In addition to removing bad labels, we also observed **missing detections** — where beetles were present but not labeled. To handle this, the editor was used in conjunction with the **`labelme`** annotation tool to manually add missing bounding boxes.
+In addition to removing bad labels, I also observed **missing detections** — where beetles re present but not labeled. To handle this, the editor was used in conjunction with the **`labelme`** annotation tool to manually add missing bounding boxes.
 
 Thanks to the reduced editing required from the semi-supervised labeling pipeline, we were able to efficiently create a **fully labeled object detection dataset of 58,000 images**.
 
 ## Model Evaluation
 
-With the finalized labeled dataset, we are now working on benchmarking a set of state-of-the-art object detection architectures:
+With the finalized labeled dataset, I am now working on benchmarking a set of state-of-the-art object detection architectures:
 
 - **YOLOv10**
 - **YOLOv11**
 - **DETR (DEtection TRansformer)**
 - **Co-DETR (Context-enhanced DETR)**
 
-To ensure robust evaluation, we are using **5-fold cross-validation** to compare each model's performance across metrics such as:
+To ensure robust evaluation, I am using **5-fold cross-validation** to compare each model's performance across metrics such as:
 
 - Mean Average Precision (mAP)
 - Precision / Recall
