@@ -17,7 +17,7 @@ Our objective is to create a dataset and a model that can robustly detect bark b
 **Initial Dataset Size:** ~58,000 images  
 **Challenge:** No bounding box annotations available.
 
-To quick start the annotation process, a semi-supervised pipeline was developed using **GroundingDINO** to generate initial bounding boxes. These labels were then used to train a series of **YOLOv10** models in iterative fashion. Meaning, the next model will train on the labels generated from the previous model.
+To quick start the annotation process, I developed a semi-supervised pipeline using **GroundingDINO** to generate initial bounding boxes. These labels were then used to train a series of **YOLOv10** models in iterative fashion. Meaning, the next model will train on the labels generated from the previous model.
 
 ### Detection Counts Per Iteration
 The number of detections per iteration was used as a proxy metric for model improvement, since ground truth annotations were not available yet.
@@ -48,7 +48,7 @@ To make the label refinement process more efficient, I developed a **bounding bo
 
 ![Bounding Box Editor Screenshot](clean_data/editor.png)
 
-In addition to removing bad labels, I also observed **missing detections** — where beetles re present but not labeled. To handle this, the editor was used in conjunction with the **`labelme`** annotation tool to manually add missing bounding boxes.
+In addition to removing bad labels, I also observed **missing detections** — where beetles are present but not labeled. To handle this, the editor was used in conjunction with the **`labelme`** annotation tool to manually add missing bounding boxes.
 
 Thanks to the reduced editing required from the semi-supervised labeling pipeline, we were able to efficiently create a **fully labeled object detection dataset of 58,000 images**.
 
@@ -60,6 +60,7 @@ With the finalized labeled dataset, I am now working on benchmarking a set of st
 - **YOLOv11**
 - **DETR (DEtection TRansformer)**
 - **Co-DETR (Context-enhanced DETR)**
+- **RF-DETR**
 
 To ensure robust evaluation, I am using **5-fold cross-validation** to compare each model's performance across metrics such as:
 
