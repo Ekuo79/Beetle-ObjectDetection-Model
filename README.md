@@ -47,6 +47,7 @@ To make the label refinement process more efficient, I developed a **bounding bo
 
 
 ![Bounding Box Editor Screenshot](clean_data/editor.png)
+![Bounding Box Editor Screenshot](clean_data/editor2.png)
 
 In addition to removing bad labels, I also observed **missing detections** — where beetles are present but not labeled. To handle this, the editor was used in conjunction with the **`labelme`** annotation tool to manually add missing bounding boxes.
 
